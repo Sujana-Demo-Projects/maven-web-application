@@ -102,7 +102,7 @@
 	    </repository>
 	    
 	    <snapshotRepository>
-	      <id>nexus</id>
+	      <id>jfrog</id>
 	      <name>a0rszezb3fpae-artifactory-primary-1-snapshots</name>
 	      <url>https://demoprojects.jfrog.io/artifactory/MAVEN</url>
 	    </snapshotRepository>
