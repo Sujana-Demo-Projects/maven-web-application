@@ -96,7 +96,7 @@
 	<distributionManagement>
 	
 	    <repository>
-	      <id>nexus</id>
+	      <id>jfrog</id>
 	      <name>a0rszezb3fpae-artifactory-primary-1-releases</name>
 	      <url>https://demoprojects.jfrog.io/artifactory/MAVEN</url>
 	    </repository>
