@@ -3,7 +3,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	
 	<groupId>com.mt</groupId>
-	<artifactId>maven-web-application</artifactId>
+	<artifactId>maven-web-applications</artifactId>
 	<packaging>war</packaging>
 	<version>0.0.1-SNAPSHOT</version>
 	
@@ -97,7 +97,7 @@
 	
 	    <repository>
 	      <id>nexus</id>
-	      <name>Mithun Technologies Releases Nexus Repository</name>
+	      <name>Software Solutions Nexus Repository</name>
 	      <url>http://54.255.174.111:8081/repository/flipkart-release/</url>
 	    </repository>
 	    
@@ -110,7 +110,7 @@
 	</distributionManagement>
 	
 	<build>
-		<finalName>maven-web-application</finalName>
+		<finalName>maven-web-applications</finalName>
 		
 		<plugins>
 			<plugin>
@@ -130,7 +130,7 @@
 				<configuration>
 					<scanIntervalSeconds>10</scanIntervalSeconds>
 					<webApp>
-						<contextPath>/maven-web-application</contextPath>
+						<contextPath>/maven-web-applications</contextPath>
 					</webApp>
 				</configuration>
 			</plugin>
@@ -143,7 +143,7 @@
 					<downloadSources>true</downloadSources>
 					<downloadJavadocs>true</downloadJavadocs>
 					<wtpversion>2.0</wtpversion>
-					<wtpContextName>maven-web-application</wtpContextName>
+					<wtpContextName>maven-web-applications</wtpContextName>
 				</configuration>
 			</plugin>
 			
