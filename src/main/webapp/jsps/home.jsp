@@ -9,7 +9,7 @@
 </head>
 </head>
 <body>
-<h1 align="center">Welcome to Software Solutions. Hyderabad </h1>
+<h1 align="center">Welcome to Sample Page. Hyderabad </h1>
 <h1 align="center"> Software Solutions - It is software company. Great place to work with. </h1>
 <hr>
 <br>
