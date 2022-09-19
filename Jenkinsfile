@@ -7,6 +7,8 @@ pipeline{
         buildDiscarder logRotator(artifactDaysToKeepStr: '3', artifactNumToKeepStr: '3', daysToKeepStr: '3', numToKeepStr: '3')
         timestamps()
     }
+    triggers {
+    }
     stages{
         stage("CheckOutCodeFromGitHub"){
             steps{
