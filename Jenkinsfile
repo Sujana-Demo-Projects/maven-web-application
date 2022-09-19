@@ -23,15 +23,11 @@ pipeline{
                 sh "mvn sonar:sonar"
             }
         }
-        stage("Quality gate") {
+        stage("Quality Gate") {
             steps {
-                 script {
-                    def qualitygate = waitForQualityGate()
-                    sleep(10)
-                    if (qualitygate.status != "OK") {
-                    waitForQualityGate abortPipeline: true
-                    }
-                 }
+              timeout(time: 15, unit: 'MINUTES') {
+                waitForQualityGate abortPipeline: true
+              }
             }
         }
         stage("StoringPackageInJFrog"){
