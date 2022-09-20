@@ -1,8 +1,5 @@
 pipeline{
     agent any
-    // environment {
-    //    qg = "waitForQualityGate()"
-   // }
     tools {
         maven 'Maven-3.8.6'
         
