@@ -32,9 +32,10 @@ pipeline{
               }
                   else {
                       print "Pipeline is Successfully completed: ${qg.status}"
+                  }
               }
-            }
-            }
+           }
+        }
         stage("StoringPackageInJFrog"){
             steps{
                 sh "mvn deploy"
