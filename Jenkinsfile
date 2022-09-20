@@ -23,7 +23,9 @@ pipeline{
         }
         stage("SourceCodeQualityTestingUsingSonarQube"){
             steps{
-                sh "mvn sonar:sonar"
+                withSonarQubeEnv('My SonarQube Server') {
+                    sh 'mvn sonar:sonar'
+                }
             }
         }
         stage("Quality Gate") {
