@@ -23,8 +23,11 @@ pipeline{
         }
         stage("SourceCodeQualityTestingUsingSonarQube"){
             steps{
-                withSonarQubeEnv('My SonarQube Server') {
+                script{
+                    scannerHome = tool 'sonarqubejenkins'
+                    withSonarQubeEnv('My SonarQube Server') {
                     sh 'mvn sonar:sonar'
+                    }
                 }
             }
         }
