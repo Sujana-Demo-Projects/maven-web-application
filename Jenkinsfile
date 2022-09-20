@@ -29,7 +29,7 @@ pipeline{
                 waitForQualityGate abortPipeline: true
               }
             }
-          }
+        }
         stage("StoringPackageInJFrog"){
             steps{
                 sh "mvn deploy"
