@@ -5,7 +5,7 @@ pipeline{
    // }
     tools {
         maven 'Maven-3.8.6'
-        'sonarqube'
+        
     }
     options {
         buildDiscarder logRotator(artifactDaysToKeepStr: '3', artifactNumToKeepStr: '3', daysToKeepStr: '3', numToKeepStr: '3')
@@ -24,22 +24,13 @@ pipeline{
         }
         stage("SourceCodeQualityTestingUsingSonarQube"){
             steps{
-                script{
-                    withSonarQubeEnv('My SonarQube Server') {
+                
                     sh 'mvn sonar:sonar'
-                    }
+                    
                 }
-            }
+            
         }
-        stage("Quality Gate") {
-            steps {
-                script {
-                 timeout(time: 1, unit: 'HOURS') {
-                waitForQualityGate abortPipeline: true
-              }
-              }
-           }
-        }
+        
         stage("StoringPackageInJFrog"){
             steps{
                 sh "mvn deploy"
